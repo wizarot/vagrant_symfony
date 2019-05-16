@@ -26,6 +26,8 @@ vi /etc/php/7.0/fpm/php.ini
 service php7.2-fpm start/stop/restart
 
 打包box: vagrant package
+vagrant package --output package.box
+
 vagrant init mybox/mybox --box-version 1.6.0
 
 ubuntu刪除软件:

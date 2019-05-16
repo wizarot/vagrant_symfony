@@ -3,6 +3,9 @@ ip: "192.168.10.10"
 memory: 2048
 cpus: 1
 provider: virtualbox
+box: dev
+version: 1.0
+name: symfony
 
 authorize: ~/.ssh/id_rsa.pub
 
@@ -10,12 +13,14 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/code
+    - map: ~/php_productions
       to: /home/vagrant/code
 
 sites:
-    - map: homestead.test
-      to: /home/vagrant/code/public
+    - map: id-application.test.com
+      to: /home/vagrant/code/id-application/web
+      php: "7.0"
+      type: "symfony2"
 
 databases:
     - homestead
